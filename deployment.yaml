@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: idp
+  labels:
+    app: idp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: idp
+  template:
+    metadata:
+      labels:
+        app: idp
+    spec:
+      containers:
+        - name: idp
+          image: 160721459527.dkr.ecr.eu-central-1.amazonaws.com/idp:1.2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

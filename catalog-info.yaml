@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "test"
+  annotations:
+    github.com/project-slug: 'vinodrec2004/test-vino'
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
